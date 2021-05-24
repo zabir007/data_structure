@@ -8,6 +8,7 @@ public class LinkedList {
     public void insert(int data) {
         Node node = new Node();
         node.data = data;
+        node.next = null;
 
         if(head==null) {
             head = node;
@@ -34,11 +35,13 @@ public class LinkedList {
     public void insertAt(int index, int data) {
         Node node = new Node();
         node.data = data;
+        node.next = null;
 
         if(index==0) {
             insertStart(data);
         }
 
+        else {
         Node temp = head;
         for(int i=0; i<index-1; i++) {
            temp = temp.next;
@@ -46,6 +49,24 @@ public class LinkedList {
 
         node.next = temp.next;
         temp.next = node;
+        }
+    }
+
+    // Remove Data
+    public void removeAt(int index) {
+        if(index==0) {
+            head = head.next;
+        }
+        else {
+            Node temp = head;
+            Node n = null;
+            for(int i=0; i<index-1; i++) {
+               temp = temp.next;
+            }
+            n = temp.next;
+            temp.next = n.next;
+            n = null;
+        }
     }
 
     // Display method
@@ -56,4 +77,5 @@ public class LinkedList {
             node = node.next;
         }
     }
+
 }
