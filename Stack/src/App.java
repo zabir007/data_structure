@@ -9,21 +9,10 @@ public class App {
         stack.push(30);
         stack.push(40);
         stack.push(50);
-        stack.push(60);
         stack.show();
+       
 
-        stack.pop();
-        stack.show();
-        stack.pop();
-        stack.show();
-        stack.pop();
-        stack.show();
-        stack.pop();
-        stack.show();
-        stack.pop();
-        stack.show();
-        stack.pop();
-        stack.show();
+    
 
     }
 }

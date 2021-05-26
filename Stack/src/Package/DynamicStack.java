@@ -1,6 +1,6 @@
 package Package;
 
-public class DynamicStack {
+public class DynamicStack implements IStack  {
     
     int cap = 2;
     int stack[] = new int[cap];
@@ -15,7 +15,7 @@ public class DynamicStack {
         top++;
     }
 
-    private void expand() {
+        public void expand() {
         int len = size();
         int newStack [] = new int[cap*2];
         System.arraycopy(stack, 0, newStack, 0, len);
@@ -37,13 +37,13 @@ public class DynamicStack {
         return data;
     }
 
-    private void shirink() {
-        int len = size();
-        if(len<= (cap/2)/2)
+    public void shirink() {
+        int length = size();
+        if(length<= (cap/2)/2)
             cap = cap/2;
 
             int newStack [] = new int[cap*2];
-            System.arraycopy(stack, 0, newStack, 0, len);
+            System.arraycopy(stack, 0, newStack, 0, length);
             stack = newStack;
     }
 

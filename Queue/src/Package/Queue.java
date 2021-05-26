@@ -1,6 +1,5 @@
 package Package;
-
-public class Queue {
+public class Queue implements IQueue {
     int queue[] = new int[5];
     int size;
     int front;
@@ -28,6 +27,7 @@ public class Queue {
     }
 
     public int size() {
+        System.out.println("queue size is: "+ size);
         return size;
     }
 
@@ -40,7 +40,6 @@ public class Queue {
     }
 
     public void show() {
-        System.out.println("Elements: ");
         for(int i=0; i<size; i++) {
             System.out.print(queue[(front+i)%5]+ " ");
         }

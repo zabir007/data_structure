@@ -1,6 +1,6 @@
 package Package;
 
-public class LinkedList {
+public class LinkedList implements ILinkedList {
     
     Node head;
 
@@ -73,9 +73,9 @@ public class LinkedList {
     public void show() {
         Node node = head;
         while(node != null) {
-            System.out.println(node.data);
+            System.out.print(node.data + " ");
             node = node.next;
         }
+        System.out.println();
     }
-
 }
