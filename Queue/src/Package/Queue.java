@@ -27,7 +27,7 @@ public class Queue implements IQueue {
     }
 
     public int size() {
-        System.out.println("queue size is: "+ size);
+        System.out.println("qSize : "+ size);
         return size;
     }
 
